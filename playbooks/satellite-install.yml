@@ -1,0 +1,23 @@
+---
+- hosts: localhost
+  roles:
+    - role: oasis_roles.openstack_provision
+  vars:
+    openstack_provision_servers:
+      - name: satellite.hattrick2.lab
+        cloud: hattrick2
+        flavor: sat6.min
+        image: 'rhel76'
+        count: 1
+        key: /home/kejones/.ssh/id_rsa
+        key_name: kdj
+        auto_ip: yes
+        security_groups:
+          - default
+        groups:
+          - satellite
+
+- hosts: satellite
+  tasks:
+    - ping:
+

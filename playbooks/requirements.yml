@@ -1,0 +1,6 @@
+#From Galaxy
+- oasis_roles.openstack_provision
+- oasis_roles.rhsm
+- oasis_roles.hostname
+- oasis_roles.nmcli_add_addrs
+- oasis_roles.firewalld
